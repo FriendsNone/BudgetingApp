@@ -1,4 +1,4 @@
-package com.middlename.budgetingapp;
+package com.middlename.budgetingapp.utils;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

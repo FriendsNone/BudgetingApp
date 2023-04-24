@@ -1,4 +1,4 @@
-package com.middlename.budgetingapp;
+package com.middlename.budgetingapp.utils;
 
 import androidx.room.TypeConverter;
 import java.util.Date;
