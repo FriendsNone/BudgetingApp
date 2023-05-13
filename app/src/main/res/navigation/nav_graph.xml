@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/calendarViewFragment">
+
+    <fragment
+        android:id="@+id/calendarViewFragment"
+        android:name="com.middlename.budgetingapp.ui.fragments.CalendarViewFragment"
+        android:label="CalendarViewFragment"
+        tools:layout="@layout/fragment_calender_view">
+
+        <action
+            android:id="@+id/action_calendarViewFragment_to_budgetEntryFragment"
+            app:destination="@id/budgetEntryFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/budgetEntryFragment"
+        android:name="com.middlename.budgetingapp.ui.fragments.BudgetEntryFragment"
+        android:label="BudgetEntryFragment"
+        tools:layout="@layout/fragment_budget_entry">
+
+        <action
+            android:id="@+id/action_budgetEntryFragment_to_calendarViewFragment"
+            app:destination="@id/calendarViewFragment" />
+
+        <argument
+            android:name="selectedDate"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.middlename.budgetingapp.ui.fragments.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+
+        <action
+            android:id="@+id/action_profileFragment_to_calendarViewFragment"
+            app:destination="@id/calendarViewFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.middlename.budgetingapp.ui.fragments.ReportsFragment"
+        android:label="ReportsFragment"
+        tools:layout="@layout/fragment_reports" />
+
+    <action
+        android:id="@+id/action_global_profileFragment"
+        app:destination="@id/profileFragment" />
+
+</navigation>
